@@ -2,10 +2,24 @@
   .cards {
     @apply w-full py-4 rounded-lg text-left;
     & .card {
-      @apply flex flex-col justify-between items-start max-w-5xl mx-auto px-4 py-4 rounded border border-solid border-primary;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+
+      align-items: flex-start;
+      justify-content: space-between;
+      border-radius: 0.25rem;
+      border-width: 1px;
+      border-style: solid;
+      border-color: #526488;
+      border-color: var(--color-primary);
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
 
       & .cover-image {
-        @apply mb-0 w-full rounded-sm;
+        width: 100%;
       }
 
       &.card--clickable {
@@ -20,7 +34,6 @@
 
     & li + li,
     & .card + .card {
-      @apply mt-4;
     }
   }
   .card {
@@ -72,7 +85,6 @@
       & .card {
         @apply flex-row;
         & .cover-image {
-          @apply mt-0 ml-2 w-1/2;
         }
       }
     }
@@ -81,7 +93,6 @@
     .cards {
       & .card {
         & .cover-image {
-          @apply w-1/3;
         }
       }
     }

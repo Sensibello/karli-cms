@@ -1,14 +1,24 @@
 <template>
-  <nav class="scrim-bg fixed z-40 top-0 inset-x-0 pt-3 px-3" aria-label="Main Menu">
-    <ul class="flex">
-      <li class="flex-1">
-        <nuxt-link class="btn block" to="/">Home</nuxt-link>
+  <nav class="fixed inline-flex justify-around z-40 top-0 inset-x-0 pt-3 px-3" aria-label="Main Menu">
+    <a class="logo">
+      <img src="/assets/karli/ks-1-white.png" class="logo-image image" alt="karli sensibello" />
+    </a>
+
+    <ul class="flex justify-end">
+      <li class="">
+        <nuxt-link class="btn-nav block" to="/">Home</nuxt-link>
       </li>
-      <li class="flex-1 ml-2">
-        <nuxt-link class="btn block" to="/blog">Blog</nuxt-link>
+      <li class="">
+        <nuxt-link class="btn-nav block" to="/about">About</nuxt-link>
       </li>
-      <li class="flex-1 ml-2">
-        <nuxt-link class="btn block" to="/projects">Projects</nuxt-link>
+      <li class="">
+        <nuxt-link class="btn-nav block" to="/projects">Projects</nuxt-link>
+      </li>
+      <li class="">
+        <nuxt-link class="btn-nav block" to="/resume">Resume</nuxt-link>
+      </li>
+      <li class="">
+        <nuxt-link class="btn-nav block" to="/contact">Contact</nuxt-link>
       </li>
     </ul>
   </nav>
@@ -16,11 +26,18 @@
 
 <script>
 export default {
-  name: 'Header'
+  name: 'Header',
 }
 </script>
 
 <style lang="postcss" scoped>
+.logo {
+  .logo-image {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
 .scrim-bg {
   &::before {
     content: '';
@@ -38,7 +55,6 @@ export default {
   }
 }
 .nuxt-link-exact-active {
-  @apply text-gray-200 border-gray-400 bg-gray-800 bg-opacity-25 cursor-default;
 }
 
 .light {
@@ -55,11 +71,19 @@ export default {
 
 /* Need two because of smoother switching between color modes */
 @keyframes fadeIn1 {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @keyframes fadeIn2 {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 </style>

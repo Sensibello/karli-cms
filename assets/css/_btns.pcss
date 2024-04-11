@@ -18,6 +18,46 @@
     }
   }
 
+  .btn-nav {
+    border-radius: 0.25rem;
+    border-width: 0px;
+
+    background-color: #111827;
+    background-color: transparent;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    text-align: center;
+    font-weight: 600;
+
+    color: var(--color-earthy-coconut);
+
+    &:hover {
+      cursor: pointer;
+      border-color: var(--color-earthy-green);
+      background-color: var(--color-earthy-organic);
+      --tw-bg-opacity: 0.25;
+      color: var(--color-earthy-coconut);
+    }
+
+    &.btn--active {
+      cursor: default;
+      border-color: var(--color-earthy-green);
+      background-color: var(--color-earthy-organic);
+      --tw-bg-opacity: 0.25;
+      color: var(--color-earthy-coconut);
+      &:hover {
+        @apply bg-primary-600;
+      }
+    }
+    &.btn--disabled,
+    &[disabled='true'],
+    &:disabled {
+      @apply text-gray-400 cursor-not-allowed;
+    }
+  }
+
   .light {
     & .btn {
       @apply border-primary-600 text-primary-800 bg-gray-200;
